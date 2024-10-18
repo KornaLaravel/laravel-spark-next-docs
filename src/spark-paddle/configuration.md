@@ -151,13 +151,18 @@ public function paddleName(): string|null
 }
 
 /**
- * Get the email address that should be associated with the Paddle customer.
+ * Get the unique email address that should be associated with the Paddle customer.
  */
 public function paddleEmail(): string|null
 {
     return $this->email;
 }
 ```
+
+::: warning Paddle Customer Email Address
+
+Paddle requires each customer to have a unique email address, so multiple customers cannot share the same email.
+:::
 
 ## Defining Subscription Plans
 
